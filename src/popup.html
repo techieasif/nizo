@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nizo</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="header">
+        <p class="badge">Nizo</p>
+        <h1>Resolve Sentry Faster</h1>
+        <p class="subtitle">Issue context in one tap.</p>
+      </header>
+
+      <section class="actions">
+        <button class="action" data-action="getRawStacktracePrompt">
+          1. Get Raw Stacktrace Prompt
+        </button>
+        <button class="action" data-action="openReplay">2. Open Replay</button>
+        <button class="action" data-action="getUserDetails">
+          3. Get User Details
+        </button>
+        <button class="action" data-action="getReplayErrors">
+          4. Get Replay Errors
+        </button>
+        <button class="action" data-action="getReplayNetworkErrors">
+          5. Get Replay Network Errors
+        </button>
+      </section>
+
+      <section class="output">
+        <div class="output-head">
+          <p id="status" class="status">Open a Sentry issue or replay tab.</p>
+          <button id="copyDetails" class="copy-btn" title="Copy response" aria-label="Copy response">
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <rect x="9" y="9" width="10" height="10" rx="2"></rect>
+              <rect x="5" y="5" width="10" height="10" rx="2"></rect>
+            </svg>
+          </button>
+        </div>
+        <pre id="details" class="details" aria-live="polite"></pre>
+      </section>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Nizo",
+  "version": "0.1.0",
+  "description": "Resolve Sentry issues faster with one-click context actions.",
+  "action": {
+    "default_title": "Nizo",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "tabs", "clipboardWrite", "scripting"],
+  "host_permissions": ["https://sentry.io/*", "https://*.sentry.io/*"],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://sentry.io/organizations/*",
+        "https://*.sentry.io/organizations/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
