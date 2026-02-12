@@ -43,13 +43,21 @@ body {
 }
 
 .badge {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   margin: 0 0 6px;
   font-size: 10px;
   letter-spacing: 0.22em;
   text-transform: uppercase;
   color: var(--accent);
   font-weight: 600;
+}
+
+.badge-logo {
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
 }
 
 .header h1 {

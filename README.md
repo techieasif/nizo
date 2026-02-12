@@ -2,6 +2,12 @@
 
 Nizo is a Chrome extension to speed up Sentry issue triage from issue and replay pages.
 
+![Nizo Logo](assets/logo/nizo-logo.svg)
+
+## Screenshot
+
+![Nizo Popup](assets/screenshots/nizo-popup.png)
+
 ## Features
 
 1. `Get Raw Stacktrace Prompt`

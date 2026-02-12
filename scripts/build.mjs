@@ -1,4 +1,4 @@
-import { mkdir, rm, copyFile } from "node:fs/promises";
+import { mkdir, rm, copyFile, cp } from "node:fs/promises";
 import { spawn } from "node:child_process";
 
 function run(command, args) {
@@ -25,5 +25,6 @@ await run("npx", ["tsc", "-p", "tsconfig.json"]);
 await copyFile("manifest.json", "dist/manifest.json");
 await copyFile("src/popup.html", "dist/popup.html");
 await copyFile("src/popup.css", "dist/popup.css");
+await cp("assets", "dist/assets", { recursive: true });
 
 console.log("Build complete. Load /dist as unpacked extension.");
